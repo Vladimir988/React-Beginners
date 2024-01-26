@@ -41,7 +41,17 @@
         // const element = React.createElement(React.Fragment, null, element1, ' - ', element2);
         // ReactDOM.render(element, document.getElementById('root'));
 
-        const element = <React.Fragment><span>Hello</span> <span>World</span></React.Fragment>;
+        // const element = <React.Fragment><span>Hello</span> <span>World</span></React.Fragment>;
+        // ReactDOM.render(element, document.getElementById('root'));
+
+        const Message = props => <div className="message">{props.children}</div>;
+        const element = <div className="container">
+          <Message>
+            Hello World
+            <Message>Goodbye World</Message>
+            <span>Hey there</span>
+          </Message>
+        </div>;
         ReactDOM.render(element, document.getElementById('root'));
     </script>
 </body>
